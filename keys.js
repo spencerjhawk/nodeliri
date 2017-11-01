@@ -4,8 +4,8 @@ console.log('this is loaded');
 var twitterKeys = {
   consumer_key: '<3CqqsC4uarW7Pabo4tcogyDlf>',
   consumer_secret: '<h3L6JrNyTHtuug3bs7YP1GOads9Fo1EJQmxjs78pu0tmQ89Dat>',
-  access_token_key: '<input here>',
-  access_token_secret: '<input here>',
+  access_token_key: '<925130664302858241-jB6yN5SiUaAuDSati1sSMHJsAKpr1qBe>',
+  access_token_secret: '<0Nebs8qWCHpwigxW82tL2oMRw1YYKVXSUQplxHDAZJfpW>',
 }
 
 var spotifyKeys = {
