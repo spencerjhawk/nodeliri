@@ -1,4 +1,4 @@
-```JavaScript
+
 console.log('this is loaded');
 
 var twitterKeys = {
@@ -16,4 +16,3 @@ var spotifyKeys = {
 }
 
 module.exports = twitterKeys;
-```
