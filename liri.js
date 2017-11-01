@@ -117,7 +117,7 @@ var getMeSpotify = function(songName) {
     var songs = data.tracks;
     var data = []; 
 
-    for (var i = 0; i < songs.data; i++) {
+    for (var i = 0; i < songs.length; i++) {
       data.push({
         'artist(s)': songs[i].artists.map(getArtistNames),
         'song name: ': songs[i].name,
