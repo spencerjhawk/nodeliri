@@ -44,7 +44,7 @@ var writeToLog = function(data) {
 var getTweets = function() {
   var client = new twitter(dataKeys.twitterKeys);
 
-  var params = { screen_name: 'sjhawk92', count: 10 };
+  var params = { screen_name: 'Spencer_Hawk', count: 10 };
 
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
 
