@@ -114,10 +114,10 @@ var getMeSpotify = function(songName) {
       return;
     }
 
-    var songs = data.tracks.items;
+    var songs = data.tracks;
     var data = []; 
 
-    for (var i = 0; i < songs.length; i++) {
+    for (var i = 0; i < songs.data; i++) {
       data.push({
         'artist(s)': songs[i].artists.map(getArtistNames),
         'song name: ': songs[i].name,
@@ -129,6 +129,22 @@ var getMeSpotify = function(songName) {
     writeToLog(data);
   });
 };
+
+//do what it says function
+var doWhatItSays = function() {
+  fs.readFile("random.txt", "utf8", function(error, data) {
+    console.log(data);
+    writeToLog(data);
+    var dataArr = data.split(',')
+
+    if (dataArr.length == 2) {
+      pick(dataArr[0], dataArr[1]);
+    } else if (dataArr.length == 1) {
+      pick(dataArr[0]);
+    }
+
+  });
+}
 
 //run this 
 var runThis = function(argOne, argTwo) {
