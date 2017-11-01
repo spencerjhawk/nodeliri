@@ -75,3 +75,37 @@ var getMeMovie = function(movieName) {
   });
 
 }
+
+//finds spotify artist name
+var getArtistNames = function(artist) {
+  return artist.name;
+};
+
+//finds songs on spotify
+var getMeSpotify = function(songName) {
+  //if song isn't found, finds Sweet Dreams by Eurythmics
+  if (songName === undefined) {
+    songName = 'sweet dreams (are made of this)';
+  };
+
+  spotify.search({ type: 'track', query: songName }, function(err, data) {
+    if (err) {
+      console.log('Error occurred: ' + err);
+      return;
+    }
+
+    var songs = data.tracks.items;
+    var data = []; 
+
+    for (var i = 0; i < songs.length; i++) {
+      data.push({
+        'artist(s)': songs[i].artists.map(getArtistNames),
+        'song name: ': songs[i].name,
+        'preview song: ': songs[i].preview_url,
+        'album: ': songs[i].album.name,
+      });
+    }
+    console.log(data);
+    writeToLog(data);
+  });
+};
