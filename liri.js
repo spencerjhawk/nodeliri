@@ -130,4 +130,11 @@ var getMeSpotify = function(songName) {
   });
 };
 
+//run this 
+var runThis = function(argOne, argTwo) {
+  pick(argOne, argTwo);
+};
+
+runThis(process.argv[2], process.argv[3]);
+
 
